@@ -1,0 +1,128 @@
+<resources>
+    <string name="app_name">News</string>
+    <string name="account">Settings</string>
+    <!--Tabs title-->
+    <string name="tab_general">HEADLINES</string>
+    <string name="tab_science">SCIENCES</string>
+    <string name="tab_tech">TECH-NEWS</string>
+
+    <!--Tabs URLs content-->
+    <string name="general_news">https://newsapi.org/v2/top-headlines?country=us&amp;apiKey=36ecde1260ec4231bd638bfb38ff5960</string>
+    <string name="science_news">https://newsapi.org/v2/top-headlines?language=en&amp;country=us&amp;category=science&amp;apiKey=36ecde1260ec4231bd638bfb38ff5960</string>
+    <string name="tech_news">https://newsapi.org/v2/top-headlines?language=en&amp;country=us&amp;category=technology&amp;apiKey=36ecde1260ec4231bd638bfb38ff5960</string>
+
+
+    <!-- advance search -->
+    <!-- Searching everything with some constraint
+    gen use https://newsapi.org/v2/everything?q=life&language=fr&from=2019-11-09&sortBy=popularity&apiKey=36ecde1260ec4231bd638bfb38ff5960
+          search-everywhere + user_search_key + language + user_lang + date + sort by + user_sort_by + api
+          actually date is fix
+
+          search can be done with key(require) and by popularity or newest
+    -->
+    <string name="search_everywere">https://newsapi.org/v2/everything?q=</string>
+    <string name="in_langauge">&amp;language=</string>
+    <string name="searche_date"><![CDATA[&from=2019–11–09]]></string>
+    <string name="by_popularity">&amp;sortBy=popularity</string>
+    <string name="by_newest">&amp;sortBy=publishedAt</string>
+
+    <!-- Search headline using sources
+    whith key also
+     search can be donne by category
+    -->
+    <string name="headlines_by_src">https://newsapi.org/v2/top-headlines?sources=</string>
+    <string name="headlines_with_key">&amp;q=</string>
+    <string name="using_category">&amp;category=</string>
+
+    <!-- list of sources -->
+    <string-array name="sources_list">
+        <item name="techcrunch">techcrunch</item>
+        <item name="the-washigton-post">the-washington-post</item>
+        <item name="bbc-news">bbc-news</item>
+        <item name="le-monde">le-monde</item>
+        <item name="les-echos">les-echos</item>
+    </string-array>
+
+    <!-- list of category -->
+    <string-array name="category_list">
+        <item name="none">none</item>
+        <item name="bus">business</item>
+        <item name="ent">entertainment</item>
+        <item name="gen">general</item>
+        <item name="gen">health</item>
+        <item name="sci">science</item>
+        <item name="spo">sports</item>
+        <item name="tech">technology</item>
+    </string-array>
+
+    <!-- Search headlines using country
+    search by country can be done with category also
+    -->
+    <string name="headlines_by_country">https://newsapi.org/v2/top-headlines?country=</string>
+
+    <string-array name="country_list">
+        <item name="us">us</item>
+        <item name="fr">fr</item>
+    </string-array>
+
+    <string-array name="language_list">
+        <item name="en">en</item>
+        <item name="fr">fr</item>
+    </string-array>
+
+    <!-- api key -->
+    <string name="api_key">&amp;apiKey=36ecde1260ec4231bd638bfb38ff5960</string>
+
+    <!-- from string -->
+    <string name="topic">Search by Topic</string>
+    <string name="topic_help">lowercase and without emphasis</string>
+    <string name="topic_hint">enter topic here…</string>
+    <string name="healdines">Search for headlines</string>
+    <string name="newest">Newest articles</string>
+    <string name="popular">Most Popular articles</string>
+    <string name="sources">By sources</string>
+    <string name="countries">By Country</string>
+    <string name="categories">Category</string>
+    <string name="language">Language</string>
+    <string name="simple_search_help">This search is done everywhere, refer to advance search in menu option for more specific search on the latest headlines</string>
+
+    <!-- preferences activity -->
+
+    <string name="title_preference_activity">Account Settings</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_article_info">articleInfo</string>
+
+
+    <string name="tab1">First Tab</string>
+    <string name="tab2">Second Tab</string>
+    <string name="tab3">Third Tab</string>
+    <string name="tabtitle1">Which news do you want for this tab?</string>
+    <string name="pref_user_name">Set username</string>
+    <string name="pref_user_name_summary">Set your username</string>
+
+    <string name="pref_sources">Technologies</string>
+    <string name="pref_user_profile">User Profile</string>
+    <string name="pref_update_setting">Update Settings</string>
+
+
+
+    <!-- Article content menu -->
+    <string name="add_bookmark">Add to Bookmarks</string>
+    <string name="remove_bookmark">Remove from Bookmarks</string>
+    <string name="share_link">Share link</string>
+
+
+    <string name="image_description">Image from the web</string>
+    <string name="share">Share this app</string>
+    <string name="bookmarkList">Bookmark List</string>
+    <string name="advance_help">This Search is made for Latest news, you may not always find what you want, a topic can be entered but it\'s fully optional, category
+    work only with country</string>
+    <string name="advance_search">Advance Search</string>
+    <string name="Bookmark_title">Bookmark List</string>
+    <string name="pref_send_report_summary">Send crash and log reports</string>
+    <string name="pref_send_report">Help fix bug</string>
+    <string name="general">general</string>
+    <string name="technology">technology</string>
+    <string name="science">science</string>
+</resources>

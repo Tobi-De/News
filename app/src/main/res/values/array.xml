@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category_list2">
+        <item name="business">business</item>
+        <item name="entertainment">entertainment</item>
+        <item name="general">general</item>
+        <item name="health">health</item>
+        <item name="science">science</item>
+        <item name="sports">sports</item>
+        <item name="technology">technology</item>
+    </string-array>
+</resources>
