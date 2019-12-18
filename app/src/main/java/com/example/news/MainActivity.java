@@ -81,7 +81,6 @@ public class MainActivity extends AppCompatActivity implements SimpleSearchDialo
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         switch (id) {
             case R.id.advanceSearch:
                 openAdvanceDialog();
@@ -151,13 +150,12 @@ public class MainActivity extends AppCompatActivity implements SimpleSearchDialo
                 searchURL += getString(R.string.using_category) + category;
         }
 
-        String key = "";
+        String key;
 
         if(!topic.isEmpty()) {
             key = topic.replaceAll("\\s", "+");
             searchURL += getString(R.string.headlines_with_key) + key.toLowerCase();
         }
-
 
         searchURL += getString(R.string.api_key);
         sectionsPagerAdapter.updateFragmentForSearch(searchURL, searchTitle);

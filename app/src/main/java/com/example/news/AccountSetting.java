@@ -11,9 +11,6 @@ public class AccountSetting extends PreferenceActivity {
     {
         super.onCreate(savedInstanceState);
         getFragmentManager().beginTransaction().replace(android.R.id.content, new MyPreferenceFragment()).commit();
-
-        //checkValues();
-        //showUserSettings();
     }
 
     public static class MyPreferenceFragment extends PreferenceFragment
@@ -25,18 +22,5 @@ public class AccountSetting extends PreferenceActivity {
             addPreferencesFromResource(R.xml.account_settings);
         }
     }
-
-    /*private void showUserSettings() {
-        SharedPreferences sharedPrefs= PreferenceManager.getDefaultSharedPreferences(this);
-        String username = sharedPrefs.getString("prefUsername", "NULL");
-        //boolean sendReport = sharedPrefs.getBoolean("prefSendReport", false);
-        String tab1 = sharedPrefs.getString("tab1", "none");
-        String tab2 = sharedPrefs.getString("tab2", "none");
-        String tab3 = sharedPrefs.getString("tab3", "none");
-
-        String msg = tab1 + " " + tab2 + " " + tab3;
-
-        toast(msg);
-    }*/
 
 }

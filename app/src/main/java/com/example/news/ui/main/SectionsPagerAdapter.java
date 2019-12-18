@@ -73,7 +73,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     }
 
     @Override
-    public int getItemPosition(Object object) {
+    public int getItemPosition(@NonNull Object object) {
         return POSITION_NONE;
     }
 
@@ -82,7 +82,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         TAB_TITLES.set(UtilityClass.getInstance().getActualPagePosition(), searchTitle.toUpperCase());
     }
 
-    public String getHeadlineUrl(String topic){
+    private String getHeadlineUrl(String topic){
         return mContext.getResources().getString(R.string.headlines_by_country) + "us" + mContext.getResources().getString(R.string.using_category) + topic + mContext.getResources().getString(R.string.api_key);
     }
 }

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- #2D1457 -->
+    <!-- #761CEA app bar-->
     <color name="colorPrimary">#2D1457</color>
-    <color name="colorPrimaryDark">#761CEA</color>
-    <color name="colorAccent">#A400FF</color>
-    <color name="recycleBG">#F1F2F2</color>
+    <color name="colorPrimaryDark">#4a148c</color>
+    <color name="colorAccent">#9c27b0</color>
+    <color name="recycleBG">#dddddd</color>
     <color name="cardBG">#FFFFFF</color>
 </resources>

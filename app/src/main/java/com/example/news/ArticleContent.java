@@ -1,5 +1,6 @@
 package com.example.news;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -15,12 +16,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ArticleContent extends AppCompatActivity {
 
-    LinearLayout progressLayout;
+    private LinearLayout progressLayout;
     private String url;
     private String title;
-    WebView myWebView;
+    private WebView myWebView;
     //private BookmarksMethods bookmarksMethods;
 
+    @SuppressLint("SetJavaScriptEnabled")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article_content);
@@ -40,19 +42,16 @@ public class ArticleContent extends AppCompatActivity {
         myWebView.loadUrl(url);
     }
 
-    public class myWebClient extends WebViewClient
+    class myWebClient extends WebViewClient
     {
         @Override
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
-            // TODO Auto-generated method stub
             super.onPageStarted(view, url, favicon);
             progressLayout.setVisibility(View.VISIBLE);
         }
 
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            // TODO Auto-generated method stub
-
             view.loadUrl(url);
             return true;
         }

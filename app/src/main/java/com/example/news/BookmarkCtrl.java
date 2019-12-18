@@ -9,12 +9,10 @@ import java.util.ArrayList;
 
 public class BookmarkCtrl {
 
-    private final Context context;
     private Database dataBase;
     private SQLiteDatabase db;
 
     public BookmarkCtrl(Context context) {
-        this.context = context;
         dataBase = new Database(context);
     }
 
@@ -27,11 +25,10 @@ public class BookmarkCtrl {
     }
 
     public boolean insert(BArticle article){
-        long id=0;
+        long id;
         db = dataBase.getWritableDatabase();
 
         ContentValues params = new ContentValues();
-        //params.put(DataBase.KEY_ID, idp);
         params.put(Database.KEY_TITLE, article.getTitle());
         params.put(Database.KEY_URL, article.getUrl());
 
@@ -50,7 +47,7 @@ public class BookmarkCtrl {
         params.put(Database.KEY_URL, article.getUrl());
         //params.put(DataBase.KEY_NOM, nom);
 
-        long result = 0;
+        long result;
         result= db.update(Database.TABLE_BOOKMARK,params,Database.KEY_ID+"="+rowid,null);
         close();
 
@@ -60,7 +57,7 @@ public class BookmarkCtrl {
 
     public boolean delete(long rowid){
         db=dataBase.getReadableDatabase();
-        long result =0;
+        long result;
         result= db.delete(Database.TABLE_BOOKMARK,Database.KEY_ID+ "="+rowid,null);
         close();
         return result>0;
@@ -83,6 +80,7 @@ public class BookmarkCtrl {
                 }while(c.moveToNext());
             }
         }
+        c.close();
         return personnes;
     }
 
@@ -91,7 +89,9 @@ public class BookmarkCtrl {
         db = dataBase.getReadableDatabase();
         String req="SELECT * FROM "+ Database.TABLE_BOOKMARK;
         Cursor cursor = db.rawQuery(req, null);
-        return cursor.getCount();
+        int ct =  cursor.getCount();
+        cursor.close();
+        return ct;
     }
 
 }

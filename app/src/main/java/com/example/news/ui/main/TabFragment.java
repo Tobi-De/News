@@ -110,7 +110,7 @@ public class TabFragment extends Fragment {
         return root;
     }
 
-    private class FetchDataTask extends AsyncTask<Void, Void, Void> {
+    private  class FetchDataTask extends AsyncTask<Void, Void, Void> {
 
         @Override
         protected void onPreExecute() {
@@ -178,12 +178,12 @@ public class TabFragment extends Fragment {
         }
     }
 
-    public void update(String url){
+    void update(String url){
         this.URL = url;
         new FetchDataTask().execute();
     }
 
-    public boolean getArticlesFromCache(String URL){
+    private boolean getArticlesFromCache(String URL){
         for(int i=0; i<articlesListCache.size(); i++){
             if(URL.equals(articlesListCache.get(i).getURL())){
               articleList = articlesListCache.get(i).getArticlesList();
@@ -193,7 +193,7 @@ public class TabFragment extends Fragment {
         return false;
     }
 
-    public String getHeadlineUrl(String topic){
+    private String getHeadlineUrl(String topic){
         return getContext().getResources().getString(R.string.headlines_by_country) + "us" + getContext().getResources().getString(R.string.using_category) + topic + getContext().getResources().getString(R.string.api_key);
     }
 }

@@ -106,7 +106,6 @@
     <string name="pref_update_setting">Update Settings</string>
 
 
-
     <!-- Article content menu -->
     <string name="add_bookmark">Add to Bookmarks</string>
     <string name="remove_bookmark">Remove from Bookmarks</string>
@@ -125,4 +124,6 @@
     <string name="general">general</string>
     <string name="technology">technology</string>
     <string name="science">science</string>
+    <string name="news_api">Powered by Newsapi.org</string>
+    <string name="news_image">Logo of the app</string>
 </resources>

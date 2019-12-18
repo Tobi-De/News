@@ -1,7 +1,5 @@
 package com.example.news;
 
-import com.example.news.Article;
-
 import java.util.ArrayList;
 
 public class ArticleListCache {
@@ -18,15 +16,15 @@ public class ArticleListCache {
         return articlesList;
     }
 
-    public void setArticlesList(ArrayList<Article> articlesList) {
+    /*public void setArticlesList(ArrayList<Article> articlesList) {
         this.articlesList = articlesList;
-    }
+    }*/
 
     public String getURL() {
         return URL;
     }
 
-    public void setURL(String URL) {
+    /*public void setURL(String URL) {
         this.URL = URL;
-    }
+    }*/
 }

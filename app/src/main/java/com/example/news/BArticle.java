@@ -30,9 +30,9 @@ public class BArticle {
         return url;
     }
 
-    public void setUrl(String url) {
+    /*public void setUrl(String url) {
         this.url = url;
-    }
+    }*/
 
     public String getTitle() {
         return title;

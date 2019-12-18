@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class UtilityClass {
 
-    public static UtilityClass instance;
+    private static UtilityClass instance;
     private ArrayList<BArticle> bookmarkList = new ArrayList<>();
     private BookmarkCtrl bookmarkCtrl;
     private String tab1;

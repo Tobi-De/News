@@ -6,8 +6,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class Database extends SQLiteOpenHelper {
 
-    private Context context;
-
     private final static String DATABASE_NAME="newsdb";
     private final static int VERSION = 1;
     public final static String TABLE_BOOKMARK ="bookmark";
@@ -24,9 +22,8 @@ public class Database extends SQLiteOpenHelper {
 
 
 
-    public Database(Context context) {
+    Database(Context context) {
         super(context, DATABASE_NAME, null, VERSION);
-        this.context=context;
     }
 
     @Override

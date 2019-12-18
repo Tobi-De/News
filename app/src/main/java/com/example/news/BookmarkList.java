@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class BookmarkList extends AppCompatActivity{
 
-    ArrayAdapter<BArticle> adapter;
+    private ArrayAdapter<BArticle> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
